@@ -10,11 +10,14 @@ Prob3::Prob3 ()
   contador = 0;
   i = 0;
   n = 4;
+  am = 0;
+  at = 0;
+  aproximaciones [4] = {};
 };
 
 float Prob3::fun (float x)
 {
-  return (sqrt(2+x^2))/(sqrt(2-x^2));
+  return (sqrt(2+pow(x,2)))/(sqrt(2-pow(x,2)));
 };
 
 float Prob3::area()
@@ -23,6 +26,10 @@ float Prob3::area()
   {
     contador ++;
     float h = ancho/contador;
+    float am = h*(((fun(x1+h*i))+(fun(x1+h*i+h)))/2);
+    float at = at + am;
+    i++;
+
   }
 }
 
