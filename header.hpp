@@ -10,12 +10,12 @@ class Prob1
     float raizb;
     float raizm;
   public:
-    Prob1 ( float error, float x1, float x2);
-    float biseccion ();
-    float MreglaFalsa ();
+    Prob1();
+    void biseccion ();
+    void MreglaFalsa ();
     float fun(float x);
     bool comprobarRaiz();
-    void print();    
+    void print();
 };
 
 class Prob3
@@ -28,7 +28,7 @@ class Prob3
     int i;
     int n;
   public:
-    Prob3 (float x1, float x2);
+    Prob3 ();
     float fun(float x);
     float area();
 };

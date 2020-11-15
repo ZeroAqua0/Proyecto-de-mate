@@ -1,7 +1,8 @@
 #include "header.hpp"
+#include <math.h>
 using namespace std;
 
-Prob3::Prob3 (float x)
+Prob3::Prob3 ()
 {
   x1 = -1;
   x2 = 1;
@@ -18,7 +19,7 @@ float Prob3::fun (float x)
 
 float Prob3::area()
 {
-  for (i<n-1)
+  for (i < n-1)
   {
     contador ++;
     float h = ancho/contador;
