@@ -27,6 +27,9 @@ class Prob3
     int contador; 
     int i;
     int n;
+    float am;
+    float at;
+    float aproximaciones [n];
   public:
     Prob3 ();
     float fun(float x);
