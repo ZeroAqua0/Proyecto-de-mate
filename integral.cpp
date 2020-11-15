@@ -1,5 +1,6 @@
 #include "header.hpp"
 #include <math.h>
+
 using namespace std;
 
 Prob3::Prob3 ()
@@ -12,7 +13,7 @@ Prob3::Prob3 ()
   n = 4;
   am = 0;
   at = 0;
-  aproximaciones [4] = {};
+  aproximaciones [n];
 };
 
 float Prob3::fun (float x)
@@ -28,8 +29,8 @@ float Prob3::area()
     float h = ancho/contador;
     float am = h*(((fun(x1+h*i))+(fun(x1+h*i+h)))/2);
     float at = at + am;
+    aproximaciones [i] = at;
     i++;
-
   }
-}
+};
 
