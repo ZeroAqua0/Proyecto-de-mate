@@ -1,12 +1,11 @@
 #include "header.hpp"
 #include <math.h>
-using namespace std;
 
 Prob1::Prob1()
 {
   contadorb = 0;
-  contadorm = 0; 
-  error = 0.1; 
+  contadorm = 0;
+  error = 0.1;
   x1 = 0;
   x2 = 2;
   raizm = 0;
