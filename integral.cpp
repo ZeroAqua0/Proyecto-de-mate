@@ -9,7 +9,7 @@ Prob3::Prob3 ()
   x2 = 1;
   ancho = (x1 - x2);
   contador = 0;
-  n = 4;
+  n = 1;
   am = 0;
   at = 0;
   aproximaciones[n];
@@ -22,19 +22,25 @@ float Prob3::fun (float x)
 
 void Prob3::area()
 {
-  for (int i = 0; i < n-1; i++)
+  for (n < 5)
   {
-    contador ++;
-    float h = ancho/contador;
-    float am = h*(((fun(x1+h*i))+(fun(x1+h*i+h)))/2);
-    float at = at + am;
+    for (int i = 0; i < n; i++)
+      {
+        contador ++;
+        float h = ancho/contador;
+        float am = h*(((fun(x1+h*i))+(fun(x1+h*i+h)))/2);
+        float at = at + am;
+      }
     aproximaciones [i] = at;
+    at = 0;
+    contador = 0;
+    n++;
   }
 };
 
 void Prob3::print()
 {
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < 4; i++)
   {
     cout<< "Aproximaciones con incremento de n" << aproximaciones[i] << "\n";
   }
