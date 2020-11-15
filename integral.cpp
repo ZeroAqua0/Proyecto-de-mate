@@ -1,6 +1,6 @@
 #include "header.hpp"
 #include <math.h>
-
+#include <iostream>
 using namespace std;
 
 Prob3::Prob3 ()
@@ -32,5 +32,6 @@ float Prob3::area()
     aproximaciones [i] = at;
     i++;
   }
+  cout<< "Aproximaciones con incremento de n" << aproximaciones
 };
 

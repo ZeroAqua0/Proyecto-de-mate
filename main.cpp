@@ -8,6 +8,7 @@ int main()
   prob1.biseccion();
   prob1.MreglaFalsa();
   prob1.print();
-  
+  Prob3 prob3;
+  prob3.area();
   return 0;
 };
