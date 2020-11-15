@@ -7,14 +7,16 @@ Prob1::Prob1()
 {
   contadorb = 0;
   contadorm = 0;
-  error = 0.1;
-  x1 = 0;
-  x2 = 2;
-  raizm = 0;
+  error = 0.01;
+  x1b = 0;
+  x2b = 2;
+  x1m = 0;
+  x2m = 2;
   raizb = 0;
+  raizm = 0;
 };
 
-bool Prob1::comprobarRaiz()
+bool Prob1::comprobarRaiz(float x1, float x2)
 {
   if (fun(x1)*fun(x2) < 0)
   {
@@ -33,20 +35,20 @@ float Prob1::fun(float x)
 
 void Prob1::biseccion()
 {
-  if (comprobarRaiz())
+  if (comprobarRaiz(x1b, x2b))
   {
-    float xr1 = (x1+x2)/2;
+    float xr1 = (x1b+x2b)/2;
     if (fun(xr1) < 0)
     {
-      x1 = xr1;
+      x1b = xr1;
     }
     else
     {
-      x2 = xr1;
+      x2b = xr1;
     }
-    float xr2 = (x1+x2)/2;
+    float xr2 = (x1b+x2b)/2;
     raizb = xr1;
-    if (abs(xr1-xr2)< error)
+    if (abs(xr1-xr2) > error)
     {
       biseccion();
     }
@@ -56,20 +58,20 @@ void Prob1::biseccion()
 
 void Prob1::MreglaFalsa()
 {
-  if (comprobarRaiz());
+  if (comprobarRaiz(x1m, x2m));
   {
-    float xr1 = x1 - ((fun(x2)*(x1-x2))/(fun(x2)-fun(x1)));
+    float xr1 = x1m - ((fun(x2m)*(x1m-x2m))/(fun(x2m)-fun(x1m)));
     if (fun(xr1) < 0)
     {
-      x1 = xr1;
+      x1m = xr1;
     }
     else
     {
-      x2 = xr1;
+      x2m = xr1;
     }
-    float xr2 = x1 - ((fun(x2)*(x1-x2))/(fun(x2)-fun(x1)));
+    float xr2 = x1m - ((fun(x2m)*(x1m-x2m))/(fun(x2m)-fun(x1m)));
     raizm = xr1;
-    if (abs(xr1-xr2)< error)
+    if (abs(xr1-xr2) > error)
     {
       MreglaFalsa();
     }
@@ -80,7 +82,7 @@ void Prob1::MreglaFalsa()
 void Prob1::print()
 {
   cout<<"Raiz con biseccion: "<< raizb << "\n";
-  cout<<"numero de iteraciones de biseccion: "<< contadorb << "\n";
+  cout<<"Numero de iteraciones de biseccion: "<< contadorb << "\n";
   cout<<"Raiz con regla falsa: "<< raizm << "\n";
-  cout<<"numero de iteraciones de regla falsa: "<< contadorm << "\n";
+  cout<<"Numero de iteraciones de regla falsa: "<< contadorm << "\n";
 };

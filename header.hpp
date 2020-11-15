@@ -3,8 +3,10 @@ class Prob1
 {
   private:
     float error;
-    float x1;
-    float x2;
+    float x1b;
+    float x2b;
+    float x1m;
+    float x2m;
     int contadorb;
     int contadorm;
     float raizb;
@@ -14,7 +16,7 @@ class Prob1
     void biseccion ();
     void MreglaFalsa ();
     float fun(float x);
-    bool comprobarRaiz();
+    bool comprobarRaiz(float x1, float x2);
     void print();
 };
 
