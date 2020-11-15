@@ -1,6 +1,5 @@
 #include <iostream>
 #include "header.hpp"
-#include "raiz.cpp"
 using namespace std;
 
 int main()

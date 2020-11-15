@@ -1,5 +1,7 @@
 #include "header.hpp"
 #include <math.h>
+#include <iostream>
+using namespace std;
 
 Prob1::Prob1()
 {
@@ -77,8 +79,8 @@ void Prob1::MreglaFalsa()
 
 void Prob1::print()
 {
-  cout<<"Raiz con biseccion: "<< raizb << "/n";
-  cout<<"numero de iteraciones de biseccion: "<< contadorb << "/n";
-  cout<<"Raiz con regla falsa: "<< raizm << "/n";
-  cout<<"numero de iteraciones de regla falsa: "<< contadorm << "/n";
+  cout<<"Raiz con biseccion: "<< raizb << "\n";
+  cout<<"numero de iteraciones de biseccion: "<< contadorb << "\n";
+  cout<<"Raiz con regla falsa: "<< raizm << "\n";
+  cout<<"numero de iteraciones de regla falsa: "<< contadorm << "\n";
 };
