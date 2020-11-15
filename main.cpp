@@ -1,3 +1,4 @@
+#include <iostream>
 #include "header.hpp"
 #include "raiz.cpp"
 
