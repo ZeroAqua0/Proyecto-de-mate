@@ -27,13 +27,13 @@ class Prob3
     float x2;
     float ancho;
     int contador; 
-    int i;
     int n;
     float am;
     float at;
-    float aproximaciones [n];
+    float aproximaciones [];
   public:
     Prob3 ();
     float fun(float x);
-    float area();
+    void area();
+    void print();
 };
