@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+  cout << "\n" << "Problema 1: " << "\n";
   Prob1 prob1;
   prob1.biseccion();
   prob1.MreglaFalsa();

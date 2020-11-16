@@ -26,10 +26,7 @@ class Prob3
     float x1;
     float x2;
     float ancho;
-    int contador; 
-    int n;
-    float am;
-    float at;
+    int repeticiones;
     float aproximaciones [];
   public:
     Prob3 ();
