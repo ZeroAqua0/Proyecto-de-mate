@@ -7,7 +7,7 @@ Prob4::Prob4 ()
 {
   x1 = 0;
   y1 = 1;
-  ancho = abs(x - y);
+  ancho = abs(x1 - y1);
   repeticiones = 10;
   aproximacionesEuler[repeticiones*5];
   //xf=10
@@ -36,6 +36,26 @@ void Prob4::euler()
             n++;
           }
       }
+};
+
+float Prob4::k1(float x)
+{
+  fun(x);
+};
+
+float Prob4::k2(float x, float h)
+{
+  fun(x+(h/2));
+};
+
+float Prob4::k3(float x, float h)
+{
+  fun(x+(h/2));
+};
+
+float Prob4::k4(float x, float h)
+{
+  fun(x+h);
 };
 
 void Prob4::runge ()

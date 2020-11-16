@@ -50,4 +50,8 @@ class Prob4
     void euler();
     void runge();
     void print();
+    float k1(float x);
+    float k2(float x, float h);
+    float k3(float x, float h);
+    float k4(float x, float h);
 };
