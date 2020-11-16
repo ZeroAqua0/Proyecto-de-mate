@@ -34,3 +34,20 @@ class Prob3
     void area();
     void print();
 };
+
+class Prob4
+{
+  private:
+    float x1;
+    float y1;
+    float ancho;
+    int repeticiones;
+    float aproximacionesEuler [];
+    float aproximacionesRunge [];
+  public:
+    Prob4 ();
+    float fun(float x);
+    void euler();
+    void runge();
+    void print();
+};
