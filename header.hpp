@@ -42,8 +42,7 @@ class Prob4
     float y1;
     float ancho;
     int repeticiones;
-    float aproximacionesEuler [];
-    float aproximacionesRunge [];
+    float aproximaciones [];
   public:
     Prob4 ();
     float fun(float x);
